@@ -8,6 +8,7 @@
             font-family: 'Segoe UI', sans-serif;
             background-color: #f0f4f8;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -44,6 +45,12 @@
         a:hover {
             background: #434ac8;
         }
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+        }
     </style>
 </head>
 <body>
@@ -53,5 +60,9 @@
         <p>Your New CGPA: <span class="big">{{ cgpa }}</span></p>
         <a href="/">🔁 Recalculate</a>
     </div>
+
+    <footer>
+        Developed by <a href="https://github.com/ishmam-br10" target="_blank">@ishmam-br10</a> 🐙
+    </footer>
 </body>
 </html>
