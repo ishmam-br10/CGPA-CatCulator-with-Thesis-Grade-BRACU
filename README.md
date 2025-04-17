@@ -1,5 +1,5 @@
 # 🐾 CGPA CatCulator with Thesis Grade – BRACU Edition 🎓
-
+README FILE BY CHATGPT
 Ever wondered what your updated CGPA would be if you absolutely crushed your thesis? This quirky little web app is your feline-friend-powered solution to calculate CGPA with thesis weighting — specially tailored for BRAC University students.
 
 > Built with ❤️, 🧠, and 🐈 logic.
