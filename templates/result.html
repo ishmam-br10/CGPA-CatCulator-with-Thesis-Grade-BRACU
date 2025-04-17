@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CGPA Result 📊</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .result-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .big {
+            font-size: 24px;
+            font-weight: bold;
+            color: #5c67f2;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #5c67f2;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+        a:hover {
+            background: #434ac8;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-card">
+        <h1>📊 Your Updated CGPA</h1>
+        <p>Total Credits Earned: <span class="big">{{ credits }}</span></p>
+        <p>Your New CGPA: <span class="big">{{ cgpa }}</span></p>
+        <a href="/">🔁 Recalculate</a>
+    </div>
+</body>
+</html>

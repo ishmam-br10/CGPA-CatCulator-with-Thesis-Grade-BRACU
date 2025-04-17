@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BRACU CGPA CatCulator With Thesis 🐾</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 40px;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        h1 {
+            color: #444;
+        }
+        form {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 700px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 4px;
+        }
+        input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .course-group {
+            padding: 10px;
+            border: 1px dashed #bbb;
+            margin-bottom: 20px;
+            background: #fcfcfc;
+        }
+        button {
+            background-color: #5c67f2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #434ac8;
+        }
+    </style>
+</head>
+<body>
+    <h1>🐾 BRACU CGPA CatCulator</h1>
+    <form method="post" action="/calculate">
+        <label>Completed Courses:</label>
+        <input type="number" name="completed_courses" required>
+
+        <label>Completed Credits:</label>
+        <input type="number" step="0.01" name="completed_credits" required>
+
+        <label>Current CGPA:</label>
+        <input type="number" step="0.01" name="current_cgpa" required>
+
+        <label>Number of Current Semester Courses:</label>
+        <input type="number" name="current_courses" id="course_count" required>
+
+        <div id="courses_container"></div>
+
+        <button type="submit">Calculate CGPA</button>
+    </form>
+
+    <script>
+        const courseCountInput = document.getElementById('course_count');
+        const coursesContainer = document.getElementById('courses_container');
+
+        courseCountInput.addEventListener('input', () => {
+            coursesContainer.innerHTML = '';
+            const count = parseInt(courseCountInput.value) || 0;
+
+            for (let i = 0; i < count; i++) {
+                const div = document.createElement('div');
+                div.className = 'course-group';
+                div.innerHTML = `
+                    <h4>Course ${i + 1}</h4>
+                    <label>Is Thesis? (yes/no)</label>
+                    <select name="is_thesis_${i}">
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                    <label>Grade Point:</label>
+                    <input type="number" step="0.01" name="grade_${i}" required>
+                `;
+                coursesContainer.appendChild(div);
+            }
+        });
+    </script>
+</body>
+</html>
