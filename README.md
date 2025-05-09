@@ -71,7 +71,7 @@ CGPA-CatCulator-with-Thesis-Grade-BRACU/
 ## 🐛 Reporting Issues
 
 Found a bug? Want to suggest a feature?  
-Open an issue [here](https://github.com/yourusername/CGPA-CatCulator-with-Thesis-Grade-BRACU/issues).
+Open an issue [here](https://github.com/ishmam-br10/CGPA-CatCulator-with-Thesis-Grade-BRACU/issues).
 
 ---
 
